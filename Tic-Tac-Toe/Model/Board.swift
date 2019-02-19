@@ -38,12 +38,21 @@ class Board: NSObject, GKGameModel {
     }
     
     var winningPlayer: Player? {
-        var check = boardValues
+//        var checkCol: [Player.Value] = []
+//        var checkCol: [Player.Value] = []
+        let result: (Bool, Player?)
         for row in 0...boardValues.count{
-            for col in 0...boardValues[0].count {
-                if
+            result = hasWinner(in: boardValues[row])
+            if result.0 {
+                guard let winner = result.1 else {return nil}
+                return winner
+            }
+            let col = boardValues.reduce([]) { (partialResult, array) -> [Player.Value] in
+                partialResult.append(array[row])
             }
         }
+        
+        
     }
     
     convenience init(n: Int) {
@@ -71,15 +80,17 @@ class Board: NSObject, GKGameModel {
                 return (false, nil)
             }
         }
-        
-        return (true, nil)
+        guard let index = Player.allPlayers.index(where: { player -> Bool in
+            return player.value == aux
+        }) else {return (false, nil)}
+        return (true, Player.allPlayers[index])
     }
     
     // MARK: - NSCoping
     
     //GKGameModel requires conformance to NSCopying because the strategist evaluates moves against copies of the game
     func copy(with zone: NSZone? = nil) -> Any {
-        let copy = Board()
+        let copy = Board(n: self.n)
         copy.setGameModel(self)
         return copy
     }
