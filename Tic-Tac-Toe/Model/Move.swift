@@ -9,6 +9,7 @@
 import UIKit
 import GameplayKit
 
+//GKGameModelUpdate - Implement this protocol to describe a move in your turn-based game so that a strategist object can plan game moves.
 class Move: NSObject, GKGameModelUpdate {
     
     enum score: Int{
@@ -17,10 +18,10 @@ class Move: NSObject, GKGameModelUpdate {
     }
     
     var value: Int = 0
-    var cordinate: CGPoint
+    var coordinate: CGPoint
     
-    init(cordinate: CGPoint) {
-        self.cordinate = cordinate
+    init(coordinate: CGPoint) {
+        self.coordinate = coordinate
     }
     
 

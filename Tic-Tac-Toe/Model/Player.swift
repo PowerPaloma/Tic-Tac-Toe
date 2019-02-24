@@ -9,6 +9,7 @@
 import UIKit
 import GameplayKit
 
+// GKGameModelPlayer: Implement this protocol to describe a player in your turn-based game so that a strategist object can plan game moves.
 class Player: NSObject, GKGameModelPlayer {
     
     enum Value: Int{
@@ -40,6 +41,7 @@ class Player: NSObject, GKGameModelPlayer {
     init(value: Value) {
         self.value =  value
         self.name = value.name
+        playerId = value.rawValue
     }
     
     
