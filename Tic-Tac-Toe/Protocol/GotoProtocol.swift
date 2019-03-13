@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import SpriteKit
 
+//Used to move to another scene or controller
 protocol GoToProtocol {
     func goTo(viewController: UIViewController)//used to tell the controller to go to another  viewController
     func goTo(scene: SKScene) //used to tell the controller to go to a scene

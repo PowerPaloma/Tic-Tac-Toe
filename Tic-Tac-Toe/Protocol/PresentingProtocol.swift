@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+// From scene tells the controller to present or dismiss
 protocol PresentingProtocol {
     func dismissCurrent() // used to tell the controller to dismiss yourself
     func present(alert: UIAlertController) // used to tell the controller to present a alert

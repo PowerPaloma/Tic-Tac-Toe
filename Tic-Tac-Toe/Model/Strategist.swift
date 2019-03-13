@@ -9,9 +9,10 @@
 import UIKit
 import GameplayKit
 
+// defines the general logic to decide which moves are the best ones to play.
 struct Strategist {
     
-    var strategist = GKMinmaxStrategist()
+    var strategist = GKMinmaxStrategist() // ranks every possible move to find the best one
 
     var board: Board {
         didSet {

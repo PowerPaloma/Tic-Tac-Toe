@@ -11,10 +11,10 @@ import GameplayKit
 
 class GameScene: SKScene {
     
-    var boardNode: SKSpriteNode!
-    var headerNode: SKSpriteNode!
-    var closeNode: SKSpriteNode!
-    var informationLabel: SKLabelNode!
+    var boardNode: SKSpriteNode! //node that show the board/grid
+    var headerNode: SKSpriteNode! // node that goes on botton of screen to show turn's information
+    var closeNode: SKSpriteNode! // node to exit screen
+    var informationLabel: SKLabelNode! // userd to show turn's information
     var boardPieceNodes: [[SKSpriteNode]] = []
     
     //sound variables
@@ -22,7 +22,7 @@ class GameScene: SKScene {
     var failure = SKAction.playSoundFileNamed("failure.wav", waitForCompletion: false)
     
     var strategist: Strategist!
-    var board: Board!
+    var board: Board! // class to manage the board, check for winner, check if it`s full, etc
     var n = 0 // the size of the board 3x3 ou 4x4
     var hasSound = true // to check if the sound is on
     var isOnePlayer: Bool! // to check if is one player mode
@@ -41,7 +41,7 @@ class GameScene: SKScene {
         hasSound = UserDefaults.standard.bool(forKey: "soundOn")
         isOnePlayer =  UserDefaults.standard.bool(forKey: "onePlayer")
         
-        //setting the n
+        //setting the size of board
         n = isBoard3 ? 3 : 4
         board = Board(n: n)
         
@@ -155,7 +155,7 @@ class GameScene: SKScene {
     
     private func updateGame(){
         var gameOver = ""
-        if let winner = board.winningPlayer, winner == board.currentPlayer {//cheking if has winner and the winner is the current player
+        if let winner = board.winningPlayer, winner == board.currentPlayer {//checking if has winner and the winner is the current player
             
             //just check if is one or two players to exibe the correct menssage
             if isOnePlayer {
