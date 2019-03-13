@@ -15,7 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        //setting the initial settings options
+        let isSetting = UserDefaults.standard.bool(forKey: "isSetting")
+        if !isSetting{
+            settings()
+        }
+        
         return true
     }
 
@@ -39,6 +44,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    private func settings(){
+        UserDefaults.standard.set(true, forKey: "isSetting")
+        UserDefaults.standard.set(true, forKey: "soundOn")
+        UserDefaults.standard.set(true, forKey: "onePlayer")
+        UserDefaults.standard.set(true, forKey: "board3")
     }
 
 

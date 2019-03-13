@@ -17,7 +17,15 @@
 		2F237584221C1F3900E85739 /* Move.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F237583221C1F3900E85739 /* Move.swift */; };
 		2F237586221C229000E85739 /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F237585221C229000E85739 /* Board.swift */; };
 		2F2C0C1F221ECB9B0057A693 /* Strategist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2C0C1E221ECB9B0057A693 /* Strategist.swift */; };
-		2F2C0C23222024F30057A693 /* MenuGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2C0C22222024F30057A693 /* MenuGame.swift */; };
+		2F2C0C23222024F30057A693 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2C0C22222024F30057A693 /* MenuScene.swift */; };
+		2FC18DC622230A4300EDEB66 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC18DC522230A4300EDEB66 /* MenuViewController.swift */; };
+		2FC18DCA22230A7900EDEB66 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC18DC922230A7900EDEB66 /* SettingsViewController.swift */; };
+		2FC18DD422240BBA00EDEB66 /* SKColor + Tic-Tac-Toe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC18DD322240BBA00EDEB66 /* SKColor + Tic-Tac-Toe.swift */; };
+		2FC18DD62224249100EDEB66 /* UIColor + Tic-Tac-Toe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC18DD52224249100EDEB66 /* UIColor + Tic-Tac-Toe.swift */; };
+		2FC18DD92224326B00EDEB66 /* GotoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC18DD82224326B00EDEB66 /* GotoProtocol.swift */; };
+		2FC18DE022257CFA00EDEB66 /* success.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2FC18DDB22257CF900EDEB66 /* success.wav */; };
+		2FC18DE222257CFA00EDEB66 /* failure.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2FC18DDD22257CF900EDEB66 /* failure.wav */; };
+		2FC18DE822283CD900EDEB66 /* PresentingProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC18DE722283CD900EDEB66 /* PresentingProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +41,15 @@
 		2F237583221C1F3900E85739 /* Move.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
 		2F237585221C229000E85739 /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		2F2C0C1E221ECB9B0057A693 /* Strategist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strategist.swift; sourceTree = "<group>"; };
-		2F2C0C22222024F30057A693 /* MenuGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuGame.swift; sourceTree = "<group>"; };
+		2F2C0C22222024F30057A693 /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
+		2FC18DC522230A4300EDEB66 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		2FC18DC922230A7900EDEB66 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		2FC18DD322240BBA00EDEB66 /* SKColor + Tic-Tac-Toe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SKColor + Tic-Tac-Toe.swift"; sourceTree = "<group>"; };
+		2FC18DD52224249100EDEB66 /* UIColor + Tic-Tac-Toe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Tic-Tac-Toe.swift"; sourceTree = "<group>"; };
+		2FC18DD82224326B00EDEB66 /* GotoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GotoProtocol.swift; sourceTree = "<group>"; };
+		2FC18DDB22257CF900EDEB66 /* success.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = success.wav; sourceTree = "<group>"; };
+		2FC18DDD22257CF900EDEB66 /* failure.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = failure.wav; sourceTree = "<group>"; };
+		2FC18DE722283CD900EDEB66 /* PresentingProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentingProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +82,11 @@
 		2F237566221C1B1900E85739 /* Tic-Tac-Toe */ = {
 			isa = PBXGroup;
 			children = (
+				2FC18DE422257CFE00EDEB66 /* Sounds */,
+				2FC18DD72224325A00EDEB66 /* Protocol */,
+				2FC18DD222240BA000EDEB66 /* Extension */,
+				2FC18DCC22230AE300EDEB66 /* Settings */,
+				2FC18DCB22230ADD00EDEB66 /* Menu */,
 				2F237580221C1D3400E85739 /* Game */,
 				2F23757F221C1D2600E85739 /* Model */,
 				2F237567221C1B1900E85739 /* AppDelegate.swift */,
@@ -93,9 +114,52 @@
 			children = (
 				2F23756D221C1B1900E85739 /* GameScene.swift */,
 				2F23756F221C1B1900E85739 /* GameViewController.swift */,
-				2F2C0C22222024F30057A693 /* MenuGame.swift */,
 			);
 			path = Game;
+			sourceTree = "<group>";
+		};
+		2FC18DCB22230ADD00EDEB66 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				2F2C0C22222024F30057A693 /* MenuScene.swift */,
+				2FC18DC522230A4300EDEB66 /* MenuViewController.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
+		2FC18DCC22230AE300EDEB66 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				2FC18DC922230A7900EDEB66 /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		2FC18DD222240BA000EDEB66 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2FC18DD322240BBA00EDEB66 /* SKColor + Tic-Tac-Toe.swift */,
+				2FC18DD52224249100EDEB66 /* UIColor + Tic-Tac-Toe.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		2FC18DD72224325A00EDEB66 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				2FC18DD82224326B00EDEB66 /* GotoProtocol.swift */,
+				2FC18DE722283CD900EDEB66 /* PresentingProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		2FC18DE422257CFE00EDEB66 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				2FC18DDB22257CF900EDEB66 /* success.wav */,
+				2FC18DDD22257CF900EDEB66 /* failure.wav */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,7 +220,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FC18DE022257CFA00EDEB66 /* success.wav in Resources */,
 				2F237573221C1B1900E85739 /* Main.storyboard in Resources */,
+				2FC18DE222257CFA00EDEB66 /* failure.wav in Resources */,
 				2F237575221C1B1C00E85739 /* Assets.xcassets in Resources */,
 				2F237578221C1B1C00E85739 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -171,11 +237,17 @@
 			files = (
 				2F237584221C1F3900E85739 /* Move.swift in Sources */,
 				2F237582221C1D5800E85739 /* Player.swift in Sources */,
-				2F2C0C23222024F30057A693 /* MenuGame.swift in Sources */,
+				2FC18DD62224249100EDEB66 /* UIColor + Tic-Tac-Toe.swift in Sources */,
+				2FC18DCA22230A7900EDEB66 /* SettingsViewController.swift in Sources */,
+				2F2C0C23222024F30057A693 /* MenuScene.swift in Sources */,
 				2F237586221C229000E85739 /* Board.swift in Sources */,
+				2FC18DC622230A4300EDEB66 /* MenuViewController.swift in Sources */,
+				2FC18DD92224326B00EDEB66 /* GotoProtocol.swift in Sources */,
 				2F23756E221C1B1900E85739 /* GameScene.swift in Sources */,
+				2FC18DE822283CD900EDEB66 /* PresentingProtocol.swift in Sources */,
 				2F2C0C1F221ECB9B0057A693 /* Strategist.swift in Sources */,
 				2F237570221C1B1900E85739 /* GameViewController.swift in Sources */,
+				2FC18DD422240BBA00EDEB66 /* SKColor + Tic-Tac-Toe.swift in Sources */,
 				2F237568221C1B1900E85739 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,6 +397,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MQ922JMCL6;
 				INFOPLIST_FILE = "Tic-Tac-Toe/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -343,6 +416,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MQ922JMCL6;
 				INFOPLIST_FILE = "Tic-Tac-Toe/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

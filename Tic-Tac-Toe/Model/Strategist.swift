@@ -11,15 +11,8 @@ import GameplayKit
 
 struct Strategist {
     
-    private let strategist: GKMinmaxStrategist = {
-        let strategist = GKMinmaxStrategist()
-        
-        strategist.maxLookAheadDepth = 5
-        strategist.randomSource = GKARC4RandomSource()
-        
-        return strategist
-    }()
-    
+    var strategist = GKMinmaxStrategist()
+
     var board: Board {
         didSet {
             strategist.gameModel = board
@@ -27,11 +20,11 @@ struct Strategist {
     }
     
     var bestCoordinate: CGPoint? {
-        if let move = strategist.bestMove(for: board.currentPlayer) as? Move {
+        //getting the best move for the opponent os the current player. In this way, the AI will play for the opponent lose and not for it wins
+        if let move = strategist.bestMove(for: board.currentPlayer.opponent) as? Move {
             return move.coordinate
         }
         
         return nil
     }
-
 }
